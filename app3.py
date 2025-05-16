@@ -192,17 +192,14 @@ with st.sidebar:
     st.markdown("""
     <div style="background: rgba(30, 41, 59, 0.7); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
         <h3 style="color: #f8f9fa; margin-top: 0;">Quick Actions</h3>
-        <button style="width: 100%; background: #4CAF50; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: bold; margin-bottom: 10px; cursor: pointer;">
-            Add Funds
-        </button>
-        <button style="width: 100%; background: #2d3748; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: bold; margin-bottom: 10px; cursor: pointer;">
-            Rebalance Portfolio
-        </button>
-        <button style="width: 100%; background: #2d3748; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: bold; cursor: pointer;">
-            Claim Rewards
-        </button>
     </div>
     """, unsafe_allow_html=True)
+    if st.button("➕ Add Funds", key="add_funds"):
+        st.success("Add Funds action triggered! (Demo placeholder)")
+    if st.button("🔄 Rebalance Portfolio", key="rebalance_portfolio"):
+        st.info("Rebalance Portfolio action triggered! (Demo placeholder)")
+    if st.button("🏆 Claim Rewards", key="claim_rewards"):
+        st.warning("Claim Rewards action triggered! (Demo placeholder)")
     
     # Portfolio Alerts
     st.markdown("""
@@ -612,15 +609,15 @@ with tab1:
             <h4 style="color: #f8f9fa;">Supported Wallets</h4>
             <div style="display: flex; gap: 32px; margin-top: 18px; justify-content: center; align-items: flex-end; flex-wrap: wrap;">
                 <div style="text-align: center; min-width: 90px;">
-                    <img src="https://assets-global.website-files.com/62f4a0e6b7e7e2b1e7e2b1e7/62f4a0e6b7e7e2b1e7e2b1e7_Hiro%20Wallet%20Logo.png" alt="Hiro Wallet Logo" style="height: 44px; border-radius: 10px; box-shadow: 0 2px 8px rgba(85,70,255,0.10); background: #fff; padding: 4px;"/>
+                    <span style="font-size: 2.5rem;">🦉</span>
                     <p style="color: #94a3b8; margin: 8px 0 0; font-size: 0.85rem;">Hiro Wallet</p>
                 </div>
                 <div style="text-align: center; min-width: 90px;">
-                    <img src="https://pbs.twimg.com/profile_images/1657678377186009089/Ny6k9EAK_400x400.jpg" alt="Xverse Wallet Logo" style="height: 44px; border-radius: 10px; box-shadow: 0 2px 8px rgba(34,197,94,0.10); background: #fff; padding: 4px;"/>
+                    <span style="font-size: 2.5rem;">🦊</span>
                     <p style="color: #94a3b8; margin: 8px 0 0; font-size: 0.85rem;">Xverse</p>
                 </div>
                 <div style="text-align: center; min-width: 90px;">
-                    <img src="https://leather.io/images/logo-icon.png" alt="Leather Wallet Logo" style="height: 44px; border-radius: 10px; box-shadow: 0 2px 8px rgba(255,193,7,0.10); background: #fff; padding: 4px;"/>
+                    <span style="font-size: 2.5rem;">👛</span>
                     <p style="color: #94a3b8; margin: 8px 0 0; font-size: 0.85rem;">Leather</p>
                 </div>
             </div>
@@ -785,4 +782,4 @@ if 'portfolio_df' not in st.session_state:
 
 if st.button("🔄 Refresh All Data", key="refresh_all"):
     st.session_state.portfolio_df = fetch_sbtc_portfolio_live()
-    st.experimental_rerun()
+    st.rerun()
