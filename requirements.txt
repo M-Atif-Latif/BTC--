@@ -1,0 +1,10 @@
+# Streamlit dashboard framework
+streamlit>=1.32.0
+# Plotly for interactive charts
+plotly>=5.20.0
+# Pandas for data manipulation
+pandas>=2.2.2
+# Requests for API calls
+requests>=2.31.0
+# Numpy for numerical operations
+numpy>=1.26.4
