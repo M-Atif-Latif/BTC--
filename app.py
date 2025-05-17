@@ -288,6 +288,13 @@ with st.sidebar:
     - [GitHub](https://github.com/M-Atif-Latif)
     """)
 
+    # Support Me: Gumroad
+    st.markdown("""
+    ---
+    ## ☕ Support Me
+    If you found this project helpful, you can [support me here](https://atiflatif7.gumroad.com/l/xyobfh)!
+    """)
+
 # Filter the main DataFrame based on sidebar selection
 if 'selected_protocols' in st.session_state and st.session_state.selected_protocols:
     filtered_portfolio_df = portfolio_df[portfolio_df['protocol'].isin(st.session_state.selected_protocols)]

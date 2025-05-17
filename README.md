@@ -93,7 +93,7 @@ See `requirements.txt` for exact versions and comments. Key dependencies:
 
 ## ☕ Support Me
 
-If you found this project helpful, you can [buy me a coffee](https://buymeacoffee.com/muhammadatiflatif)!
+If you found this project helpful, you can [support me here](https://atiflatif7.gumroad.com/l/xyobfh)!
 
 ## 🔗 Connect
 
